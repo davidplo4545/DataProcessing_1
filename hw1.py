@@ -26,7 +26,8 @@ def create_histogram(img_arr):
     hist = np.zeros(256)
     for pixel in img_arr:
         hist[pixel] += 1
-    return hist / np.sum(img_arr)
+    return hist
+
 def show_histogram(pdf):
     indexes = np.arange(len(img_arr))
     plt.bar(indexes, pdf , color='skyblue', edgecolor='black', width=0.5)
